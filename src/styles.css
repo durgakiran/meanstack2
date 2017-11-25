@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+body{
+  margin: 0;
+}
+.welcome{
+  text-align: center;
+  background-color: rgb(212, 212, 214);
+  padding: 30px;
+  margin: auto;
+  margin-top: 10px;
+  
+}
+@media screen and (min-width:900px ){
+  .welcome{
+    width: 70%;
+  }
+
+}
