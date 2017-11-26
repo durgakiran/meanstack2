@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserComponent } from '../user/user.component';
 import { LoginFormComponent } from '../login-form/login-form.component';
-import { MatDialog, MatDialogRef } from '@angular/material';
+//import { MatDialog, MatDialogRef } from '@angular/material';
+import { UserAuthService } from '../user-auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,22 +10,20 @@ import { MatDialog, MatDialogRef } from '@angular/material';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-    currentStatus: string = 'Login';
 
-  constructor(public dialog: MatDialog) { }
+  constructor(/* public dialog: MatDialog */) { }
 
   ngOnInit() {
   }
-  loginUserForm(): void{
-      let dialogRef = this.dialog.open(LoginFormComponent,{width: '400px'});
+  /* loginUserForm(): void {
+      let dialogRef = this.dialog.open(LoginFormComponent, {width: '400px'});
       dialogRef.afterOpen().subscribe(result => {
           console.log('I am openend');
-      })
+      });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
-      
-  }
+  } */
 
 }

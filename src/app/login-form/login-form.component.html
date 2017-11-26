@@ -1,14 +1,24 @@
-<h1 mat-dialog-title>Login</h1>
-<!--<div mat-dialog-content>
-    <form>
-        <label for="name">UserName:</label>
-        <input type="text" placeholder="username" id="name" required>
-        <label for="password">Password</label>
-        <input type="password" required>
-        <button type="submit">Submit</button>
-    </form>
-</div>-->
-<div mat-dialog-actions>
-  <button mat-button tabindex="2">Ok</button>
-  <button mat-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
-</div>
+<mat-tab-group>
+    <mat-tab label="Tab 1">
+            <ng-template mat-tab-label>
+                    Login
+            </ng-template>
+        <form (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Username" >
+            </mat-form-field><br/>
+            <mat-form-field class="example-full-width">
+                <input matInput type ="password" placeholder="Password">
+            </mat-form-field><br/>
+            <button  mat-raised-button color="primary" type="submit">Submit</button>
+        </form>
+    </mat-tab>
+    <mat-tab label="Tab 2">
+            <ng-template mat-tab-label>
+                    Register
+            </ng-template>
+            <app-registerform></app-registerform>
+    </mat-tab>
+  </mat-tab-group>
+    
+    
