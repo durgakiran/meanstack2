@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import {FlashMessagesModule} from 'angular2-flash-messages';
+//import {FlashMessagesModule} from 'angular2-flash-messages';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -31,7 +31,7 @@ import { AuthService } from './auth.service';
   ],
   imports: [
     BrowserModule, MaterialModule, AppRoutingModule,
-    FormsModule, BrowserAnimationsModule, HttpClientModule, FlashMessagesModule.forRoot()],
+    FormsModule, BrowserAnimationsModule, HttpClientModule ],
   providers: [ViewpollService, UserAuthService, AuthService],
   bootstrap: [AppComponent],
   entryComponents: [ LoginFormComponent ]

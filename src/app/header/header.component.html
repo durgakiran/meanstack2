@@ -4,5 +4,7 @@
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
 
-  <span><a mat-button href="#">Home</a><button mat-button [routerLink]="['/login']" >Login</button></span>
+  <span><a mat-button href="#">Home</a>
+  <button [ngClass]="view == false ? '': 'notshow'" mat-button [routerLink]="['/login']" >Login</button>
+  <button [ngClass]="view == true ? '': 'notshow'" mat-button [routerLink]="['/logout']" >Logout</button></span>
 </mat-toolbar>

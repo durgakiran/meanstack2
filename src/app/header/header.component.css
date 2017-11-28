@@ -6,3 +6,6 @@ h1 { font-family: Lato; }
    text-decoration: none;
    color: white;
 }
+.notshow {
+    display: none;
+}

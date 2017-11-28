@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { UserComponent } from '../user/user.component';
 import { LoginFormComponent } from '../login-form/login-form.component';
 //import { MatDialog, MatDialogRef } from '@angular/material';
@@ -10,10 +10,14 @@ import { UserAuthService } from '../user-auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(/* public dialog: MatDialog */) { }
+    view: Boolean;
+  constructor(/* public dialog: MatDialog */private _userAuthService: UserAuthService) {
+      this.view = false;
+  }
+ 
 
   ngOnInit() {
+      this._userAuthService.currentLoginStatus.subscribe(status => this.view = status);
   }
   /* loginUserForm(): void {
       let dialogRef = this.dialog.open(LoginFormComponent, {width: '400px'});
